@@ -3,6 +3,9 @@ services:
   node-app:
     build:
       context: ./node-app
-      dockerfile: Dockerfile
+      dockerfile: dev.dockerfile
     ports:
       - 3000:3000
+    volumes:
+      - ./node-app:/app
+      - /app/node_modules/
